@@ -1,0 +1,6 @@
+You're approved, {{ user.full_name|default:user.username|default:"there" }}!
+
+Your MightyRankings account is now active.
+Sign in with your Google account using {{ user.email|default:"your email" }}.
+
+— The MightyRankings Team

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <body style="margin:0;padding:0;background:#f6f7fb;font-family:Arial,Helvetica,sans-serif;color:#1f2937;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="padding:24px 0;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="background:#ffffff;border-radius:12px;overflow:hidden;">
+            <tr>
+              <td style="background:#111827;color:#ffffff;padding:20px 24px;font-size:18px;font-weight:bold;">
+                MightyRankings
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:24px;">
+                <h2 style="margin:0 0 12px 0;">We couldn’t approve your claim</h2>
+                <p style="margin:0 0 12px 0;">
+                  We reviewed your claim for <strong>{{ business.name|default:"this business" }}</strong>, but we weren’t able to approve it at this time.
+                </p>
+
+                {% if admin_note %}
+                  <div style="margin:16px 0;padding:12px 14px;background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;">
+                    <strong style="display:block;margin-bottom:6px;">Notes from our team</strong>
+                    <div style="white-space:pre-wrap;line-height:1.45;">{{ admin_note }}</div>
+                  </div>
+                {% endif %}
+
+                <p style="margin:0 0 12px 0;">
+                  If you have additional documentation proving ownership (e.g., an email from a domain you control, business registration, or a utility bill),
+                  you can reply to this email with those details and we’ll take another look.
+                </p>
+
+                {% if resubmit_url %}
+                <p style="margin:20px 0 0 0;">
+                  <a href="{{ resubmit_url }}"
+                     style="display:inline-block;background:#111827;color:#ffffff;text-decoration:none;padding:10px 16px;border-radius:8px;font-weight:600;">
+                    Resubmit your claim
+                  </a>
+                </p>
+                {% endif %}
+
+                <p style="margin:16px 0 0 0;font-size:12px;color:#6b7280;">— The MightyRankings Team</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:16px 24px;background:#f3f4f6;font-size:12px;color:#6b7280;">
+                Tip: Using an email at the business’s domain helps us verify ownership faster.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

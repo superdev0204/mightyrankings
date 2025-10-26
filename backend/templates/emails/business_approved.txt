@@ -1,0 +1,6 @@
+Your business is live!
+
+"{{ business.name|default:"Your business" }}" has been approved on MightyRankings.
+You can now manage the listing and collect reviews.
+
+— The MightyRankings Team

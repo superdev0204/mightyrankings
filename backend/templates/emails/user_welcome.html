@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <body style="margin:0;padding:0;background:#f6f7fb;font-family:Arial,Helvetica,sans-serif;color:#1f2937;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="padding:24px 0;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="background:#ffffff;border-radius:12px;overflow:hidden;">
+            <tr>
+              <td style="background:#111827;color:#ffffff;padding:20px 24px;font-size:18px;font-weight:bold;">
+                MightyRankings
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:24px;">
+                <h2 style="margin:0 0 12px 0;">Welcome, {{ user.full_name|default:user.username|default:"there" }}!</h2>
+                <p style="margin:0 0 12px 0;">
+                  Your account has been created. You can sign in with your Google account using
+                  <strong>{{ user.email|default:"your email" }}</strong>.
+                </p>
+                <p style="margin:0 0 12px 0;">
+                  Start discovering and reviewing businesses, and help the community find the best.
+                </p>
+                <p style="margin:16px 0 0 0;font-size:12px;color:#6b7280;">— The MightyRankings Team</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:16px 24px;background:#f3f4f6;font-size:12px;color:#6b7280;">
+                If you didn’t expect this email, you can safely ignore it.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

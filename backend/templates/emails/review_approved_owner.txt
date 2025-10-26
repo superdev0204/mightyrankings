@@ -1,0 +1,14 @@
+New review received
+
+Business: {{ business.name|default:"your business" }}
+{% if review %}
+{% if review.title %}Title: {{ review.title }}{% endif %}
+{% if review.rating %}Rating: {{ review.rating }}/5{% endif %}
+{% if review.content %}
+
+{{ review.content }}
+{% endif %}
+{% endif %}
+
+Sign in to your owner dashboard to respond and manage your listing.
+— The MightyRankings Team

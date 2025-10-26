@@ -1,0 +1,12 @@
+Hi,
+
+We reviewed your claim for "{{ business.name }}", but couldn’t approve it at this time.
+{% if admin_note %}
+
+Notes from our team:
+{{ admin_note }}
+{% endif %}
+
+You can reply to this email if you have additional documentation.
+
+— MightyRankings Team

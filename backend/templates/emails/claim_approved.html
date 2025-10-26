@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <body style="margin:0;padding:0;background:#f6f7fb;font-family:Arial,Helvetica,sans-serif;color:#1f2937;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="padding:24px 0;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="background:#ffffff;border-radius:12px;overflow:hidden;">
+            <tr>
+              <td style="background:#111827;color:#ffffff;padding:20px 24px;font-size:18px;font-weight:bold;">
+                MightyRankings
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:24px;">
+                <h2 style="margin:0 0 12px 0;">Your claim was approved 🎉</h2>
+                <p style="margin:0 0 12px 0;">
+                  You’re now listed as the owner of <strong>{{ business.name|default:"your business" }}</strong>.
+                </p>
+                <p style="margin:0 0 12px 0;">
+                  You can update business details, reply to reviews, and access owner tools from your dashboard.
+                </p>
+                {% if dashboard_url %}
+                <p style="margin:20px 0 0 0;">
+                  <a href="{{ dashboard_url }}"
+                     style="display:inline-block;background:#111827;color:#ffffff;text-decoration:none;padding:10px 16px;border-radius:8px;font-weight:600;">
+                    Go to your dashboard
+                  </a>
+                </p>
+                {% endif %}
+                <p style="margin:16px 0 0 0;font-size:12px;color:#6b7280;">— The MightyRankings Team</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:16px 24px;background:#f3f4f6;font-size:12px;color:#6b7280;">
+                Tip: Ask happy customers to leave a review to boost your visibility.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

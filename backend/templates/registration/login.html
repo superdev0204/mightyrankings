@@ -1,0 +1,37 @@
+{% load i18n %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{% trans "Sign in" %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 2rem; max-width: 420px; margin: 0 auto; }
+    label { display:block; margin:.5rem 0 .25rem; }
+    input { width:100%; padding:.5rem; }
+    button { margin-top:1rem; padding:.6rem 1rem; }
+    .err { color:#b91c1c; margin:.5rem 0; }
+  </style>
+</head>
+<body>
+  <h1>{% trans "Sign in" %}</h1>
+
+  {% if form.errors %}
+    <div class="err">{% trans "Please check your username and password" %}</div>
+  {% endif %}
+
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ next|default:request.GET.next }}">
+    <label for="id_username">{% trans "Username" %}</label>
+    {{ form.username }}
+    <label for="id_password">{% trans "Password" %}</label>
+    {{ form.password }}
+    <button type="submit">{% trans "Sign in" %}</button>
+  </form>
+
+  <p style="margin-top:1rem;">
+    <a href="{% url 'password_reset' %}">{% trans "Forgot password?" %}</a>
+  </p>
+</body>
+</html>

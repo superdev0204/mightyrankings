@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <body style="margin:0;padding:0;background:#f6f7fb;font-family:Arial,Helvetica,sans-serif;color:#1f2937;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="padding:24px 0;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="background:#ffffff;border-radius:12px;overflow:hidden;">
+            <tr>
+              <td style="background:#111827;color:#ffffff;padding:20px 24px;font-size:18px;font-weight:bold;">
+                MightyRankings
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:24px;">
+                <h2 style="margin:0 0 12px 0;">Your review is live 🎉</h2>
+                <p style="margin:0 0 12px 0;">
+                  Your review for <strong>{{ business.name|default:"the business" }}</strong> has been approved.
+                </p>
+                <p style="margin:0 0 12px 0;">
+                  {% if review.title %}<strong>Title:</strong> {{ review.title }}<br>{% endif %}
+                  {% if review.rating %}<strong>Rating:</strong> {{ review.rating }}/5<br>{% endif %}
+                </p>
+                {% if review.content %}
+                <div style="margin:12px 0;padding:12px;background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;">
+                  <div style="font-size:14px;color:#374151;white-space:pre-wrap;">{{ review.content }}</div>
+                </div>
+                {% endif %}
+                <p style="margin:16px 0 0 0;font-size:12px;color:#6b7280;">Thanks for sharing your experience! — The MightyRankings Team</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:16px 24px;background:#f3f4f6;font-size:12px;color:#6b7280;">
+                Want to edit your review later? Sign in and visit your dashboard.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

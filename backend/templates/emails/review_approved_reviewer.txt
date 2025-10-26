@@ -1,0 +1,12 @@
+Your review is live!
+
+Business: {{ business.name|default:"the business" }}
+{% if review.title %}Title: {{ review.title }}{% endif %}
+{% if review.rating %}Rating: {{ review.rating }}/5{% endif %}
+{% if review.content %}
+
+{{ review.content }}
+{% endif %}
+
+Thanks for sharing your experience!
+— The MightyRankings Team

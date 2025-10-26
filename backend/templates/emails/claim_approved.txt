@@ -1,0 +1,7 @@
+Hi,
+
+Your claim for "{{ business.name }}" was approved. You’re now listed as the owner on MightyRankings.
+
+You can update details, reply to reviews, and see analytics from your dashboard.
+
+— MightyRankings Team
